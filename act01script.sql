@@ -12,6 +12,13 @@ CREATE TABLE departamento (
   nombre VARCHAR(25),
   ubicacion VARCHAR(25)
 );
+CREATE TABLE proyecto (
+  id INT NOT NULL PRIMARY KEY,
+  nombre VARCHAR(20),
+  ubicacion VARCHAR(15),
+  id_cliente int,
+  CONSTRAINT fk_cliente FOREIGN KEY (id_cliente) REFERENCES clientes (id)
+);
 CREATE TABLE empleado (
   id INT NOT NULL PRIMARY KEY,
   nombre VARCHAR(20),
@@ -22,11 +29,4 @@ CREATE TABLE empleado (
   id_proyecto int,
   CONSTRAINT fk_departamento FOREIGN KEY (id_departamento) REFERENCES departamento (id),
   CONSTRAINT fk_proyecto FOREIGN KEY (id_proyecto) REFERENCES proyecto (id)
-)
-CREATE TABLE proyecto (
-  id INT NOT NULL PRIMARY KEY,
-  nombre VARCHAR(20),
-  ubicacion VARCHAR(15),
-  id_cliente int,
-  CONSTRAINT fk_cliente FOREIGN KEY (id_cliente) REFERENCES clientes (id)
-)
+);
