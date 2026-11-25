@@ -1,0 +1,4 @@
+urlid academia
+url jdbc:hsqldb:file:C:/Users/isard/Documents/NetBeansProjects/ManejoMonitoresCuaderno2-Ejercicio2/academiaHSQL
+username SA
+password

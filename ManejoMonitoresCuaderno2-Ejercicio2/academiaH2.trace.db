@@ -1,0 +1,232 @@
+2026-11-25 02:11:57.973227+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "[*]REATE DATABASE IF NOT EXISTS academia"; se esperaba "ROLLBACK, REVOKE, RUNSCRIPT, RELEASE, REFRESH"
+Syntax error in SQL statement "[*]REATE DATABASE IF NOT EXISTS academia"; expected "ROLLBACK, REVOKE, RUNSCRIPT, RELEASE, REFRESH"; SQL statement:
+REATE DATABASE IF NOT EXISTS academia [42001-252]
+2026-11-25 02:11:57.984188+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema "ACADEMIA" no encontrado
+Schema "ACADEMIA" not found; SQL statement:
+USE academia [90079-252]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:644)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.engine.Database.getSchema(Database.java:1600)
+	at org.h2.command.dml.Set.update(Set.java:396)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:139)
+	at org.h2.command.Command.executeUpdate(Command.java:307)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:262)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1344)
+	at org.h2.server.web.WebApp.query(WebApp.java:1142)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1108)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1095)
+	at org.h2.server.web.WebThread.process(WebThread.java:190)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2026-11-25 02:12:07.654929+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE [*]DATABASE IF NOT EXISTS academia"; se esperaba "OR REPLACE, FORCE, VIEW, MATERIALIZED, ALIAS, SEQUENCE, USER, TRIGGER, ROLE, SCHEMA, CONSTANT, DOMAIN, TYPE, AGGREGATE, LINKED, MEMORY, CACHED, LOCAL TEMPORARY, GLOBAL TEMPORARY, TEMPORARY, TABLE, SYNONYM, UNIQUE, SPATIAL, INDEX"
+Syntax error in SQL statement "CREATE [*]DATABASE IF NOT EXISTS academia"; expected "OR REPLACE, FORCE, VIEW, MATERIALIZED, ALIAS, SEQUENCE, USER, TRIGGER, ROLE, SCHEMA, CONSTANT, DOMAIN, TYPE, AGGREGATE, LINKED, MEMORY, CACHED, LOCAL TEMPORARY, GLOBAL TEMPORARY, TEMPORARY, TABLE, SYNONYM, UNIQUE, SPATIAL, INDEX"; SQL statement:
+CREATE DATABASE IF NOT EXISTS academia [42001-252]
+2026-11-25 02:12:07.657877+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema "ACADEMIA" no encontrado
+Schema "ACADEMIA" not found; SQL statement:
+USE academia [90079-252]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:644)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.engine.Database.getSchema(Database.java:1600)
+	at org.h2.command.dml.Set.update(Set.java:396)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:139)
+	at org.h2.command.Command.executeUpdate(Command.java:307)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:262)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1344)
+	at org.h2.server.web.WebApp.query(WebApp.java:1142)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1108)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1095)
+	at org.h2.server.web.WebThread.process(WebThread.java:190)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2026-11-25 02:12:07.660775+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "PROFESOR" ya existe
+Table "PROFESOR" already exists; SQL statement:
+CREATE TABLE profesor (
+    dni VARCHAR(10) NOT NULL PRIMARY KEY,
+    nombre VARCHAR(50),
+    apellidos VARCHAR(100),
+    direccion VARCHAR(100),
+    fecha_nacimiento DATE,
+    codigo_postal VARCHAR(5),
+    telefono VARCHAR(15)
+) [42101-252]
+2026-11-25 02:12:07.663055+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "ALUMNO" ya existe
+Table "ALUMNO" already exists; SQL statement:
+CREATE TABLE alumno (
+    dni VARCHAR(10) NOT NULL PRIMARY KEY,
+    nombre VARCHAR(50),
+    apellidos VARCHAR(100),
+    direccion VARCHAR(100),
+    fecha_nacimiento DATE,
+    codigo_postal VARCHAR(5),
+    telefono VARCHAR(15)
+) [42101-252]
+2026-11-25 02:12:07.664873+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CURSO" ya existe
+Table "CURSO" already exists; SQL statement:
+CREATE TABLE curso (
+    cod_curso INT NOT NULL PRIMARY KEY,
+    nombre VARCHAR(50)
+) [42101-252]
+2026-11-25 02:12:07.666692+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "AULA" ya existe
+Table "AULA" already exists; SQL statement:
+CREATE TABLE aula (
+    cod_aula INT NOT NULL PRIMARY KEY,
+    num_piso INT,
+    num_pupitres INT
+) [42101-252]
+2026-11-25 02:12:07.668341+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "ASIGNATURA" ya existe
+Table "ASIGNATURA" already exists; SQL statement:
+CREATE TABLE asignatura (
+    cod_asignatura INT NOT NULL PRIMARY KEY,
+    nombre VARCHAR(50),
+    num_horas INT,
+    dni_profesor VARCHAR(10) NOT NULL,
+    cod_curso INT NOT NULL,
+
+    CONSTRAINT fk_profesor
+        FOREIGN KEY (dni_profesor)
+        REFERENCES profesor(dni),
+
+    CONSTRAINT fk_curso
+        FOREIGN KEY (cod_curso)
+        REFERENCES curso(cod_curso)
+) [42101-252]
+2026-11-25 02:12:07.670770+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "MATRICULA" ya existe
+Table "MATRICULA" already exists; SQL statement:
+CREATE TABLE matricula (
+    dni_alumno VARCHAR(10) NOT NULL,
+    cod_asignatura INT NOT NULL,
+    calificacion DECIMAL(4,2),
+    incidencias VARCHAR(255),
+
+    PRIMARY KEY (dni_alumno, cod_asignatura),
+
+    CONSTRAINT fk_alumno
+        FOREIGN KEY (dni_alumno)
+        REFERENCES alumno(dni),
+
+    CONSTRAINT fk_matricula_asignatura
+        FOREIGN KEY (cod_asignatura)
+        REFERENCES asignatura(cod_asignatura)
+) [42101-252]
+2026-11-25 02:12:07.671477+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "HORARIO" ya existe
+Table "HORARIO" already exists; SQL statement:
+CREATE TABLE horario (
+    cod_asignatura INT NOT NULL,
+    cod_aula INT NOT NULL,
+    mes INT NOT NULL,
+    dia INT NOT NULL,
+    hora TIME NOT NULL,
+
+    PRIMARY KEY (cod_asignatura, cod_aula, mes, dia, hora),
+
+    CONSTRAINT fk_horario_asignatura
+        FOREIGN KEY (cod_asignatura)
+        REFERENCES asignatura(cod_asignatura),
+
+    CONSTRAINT fk_aula
+        FOREIGN KEY (cod_aula)
+        REFERENCES aula(cod_aula)
+) [42101-252]
+2026-11-25 02:13:07.500487+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "ALUMNO" ya existe
+Table "ALUMNO" already exists; SQL statement:
+CREATE TABLE alumno (
+    dni VARCHAR(10) NOT NULL PRIMARY KEY,
+    nombre VARCHAR(50),
+    apellidos VARCHAR(100),
+    direccion VARCHAR(100),
+    fecha_nacimiento DATE,
+    codigo_postal VARCHAR(5),
+    telefono VARCHAR(15)
+) [42101-252]
+2026-11-25 02:13:07.503567+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CURSO" ya existe
+Table "CURSO" already exists; SQL statement:
+CREATE TABLE curso (
+    cod_curso INT NOT NULL PRIMARY KEY,
+    nombre VARCHAR(50)
+) [42101-252]
+2026-11-25 02:13:07.504904+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "AULA" ya existe
+Table "AULA" already exists; SQL statement:
+CREATE TABLE aula (
+    cod_aula INT NOT NULL PRIMARY KEY,
+    num_piso INT,
+    num_pupitres INT
+) [42101-252]
+2026-11-25 02:13:07.506615+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "ASIGNATURA" ya existe
+Table "ASIGNATURA" already exists; SQL statement:
+CREATE TABLE asignatura (
+    cod_asignatura INT NOT NULL PRIMARY KEY,
+    nombre VARCHAR(50),
+    num_horas INT,
+    dni_profesor VARCHAR(10) NOT NULL,
+    cod_curso INT NOT NULL,
+
+    CONSTRAINT fk_profesor
+        FOREIGN KEY (dni_profesor)
+        REFERENCES profesor(dni),
+
+    CONSTRAINT fk_curso
+        FOREIGN KEY (cod_curso)
+        REFERENCES curso(cod_curso)
+) [42101-252]
+2026-11-25 02:13:07.507713+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "MATRICULA" ya existe
+Table "MATRICULA" already exists; SQL statement:
+CREATE TABLE matricula (
+    dni_alumno VARCHAR(10) NOT NULL,
+    cod_asignatura INT NOT NULL,
+    calificacion DECIMAL(4,2),
+    incidencias VARCHAR(255),
+
+    PRIMARY KEY (dni_alumno, cod_asignatura),
+
+    CONSTRAINT fk_alumno
+        FOREIGN KEY (dni_alumno)
+        REFERENCES alumno(dni),
+
+    CONSTRAINT fk_matricula_asignatura
+        FOREIGN KEY (cod_asignatura)
+        REFERENCES asignatura(cod_asignatura)
+) [42101-252]
+2026-11-25 02:13:07.508811+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "HORARIO" ya existe
+Table "HORARIO" already exists; SQL statement:
+CREATE TABLE horario (
+    cod_asignatura INT NOT NULL,
+    cod_aula INT NOT NULL,
+    mes INT NOT NULL,
+    dia INT NOT NULL,
+    hora TIME NOT NULL,
+
+    PRIMARY KEY (cod_asignatura, cod_aula, mes, dia, hora),
+
+    CONSTRAINT fk_horario_asignatura
+        FOREIGN KEY (cod_asignatura)
+        REFERENCES asignatura(cod_asignatura),
+
+    CONSTRAINT fk_aula
+        FOREIGN KEY (cod_aula)
+        REFERENCES aula(cod_aula)
+) [42101-252]
