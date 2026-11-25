@@ -1,0 +1,10 @@
+Academia\Modelo\Asignatura.class
+Academia\Conexion\ConexionDb4o.class
+Academia\Dao\AlumnoDAO.class
+Academia\Modelo\Curso.class
+Academia\Modelo\Profesor.class
+Academia\Dao\CursoDAO.class
+Academia\Dao\ProfesorDAO.class
+Academia\Dao\AsignaturaDAO.class
+Academia\Main.class
+Academia\Modelo\Alumno.class
